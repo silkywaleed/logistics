@@ -1,0 +1,253 @@
+{
+  "id": 4,
+  "name": "Departure Form",
+  "url": "url",
+  "action": "create_shipment",
+  "description": "Collecting information about the customer's departure",
+  "form_as": "sender",
+  "pages": [
+    {
+      "id": 6,
+      "name": "personal information",
+      "sort": 1,
+      "sections": [
+        {
+          "name": "",
+          "sort": "1",
+          "type": "",
+          "fields": [
+            {
+              "title": "Gender",
+              "options": "male,female",
+              "is_multi": false,
+              "is_active": true,
+              "is_required": true,
+              "sort": 1,
+              "type": "radio",
+              "key": "field-111"
+            },
+            {
+              "title": "Email",
+              "sort": 2,
+              "type": "email",
+              "key": "field-112",
+              "is_active": true,
+              "is_required": true
+            },
+            {
+              "title": "Phone Number",
+              "sort": 2,
+              "type": "text",
+              "key": "field-112",
+              "is_active": true,
+              "is_required": true
+            }
+          ]
+        },
+        {
+          "name": "",
+          "sort": "2",
+          "type": "",
+          "fields": [
+            {
+              "title": "Departure Time",
+              "sort": 2,
+              "type": "datetime",
+              "key": "field-112",
+              "is_active": true,
+              "is_required": true
+            },
+            {
+              "title": "Number of Bags",
+              "sort": 2,
+              "type": "number",
+              "key": "field-112",
+              "is_active": true,
+              "is_required": true
+            },
+            {
+              "title": "Flight Booking Number",
+              "sort": 2,
+              "type": "text",
+              "key": "field-112",
+              "is_active": true,
+              "is_required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Passenger Details",
+      "sort": 1,
+      "sections": [
+        {
+          "name": "Passengers Information",
+          "sort": "1",
+          "type": "nested",
+          "fields": [
+            {
+              "title": "First Name",
+              "sort": 2,
+              "type": "text",
+              "key": "field-112",
+              "is_active": true,
+              "is_required": true
+            },
+            {
+              "title": "Last Name",
+              "sort": 2,
+              "type": "text",
+              "key": "field-112",
+              "is_active": true,
+              "is_required": true
+            },
+            {
+              "title": "Nationality Name",
+              "options": "Saudi Arabia,Nigeria,USA,Germany",
+              "is_multi": false,
+              "is_active": true,
+              "is_required": true,
+              "sort": 1,
+              "type": "dropdown",
+              "key": "field-111"
+            },
+            {
+              "title": "Additional Notes",
+              "sort": 2,
+              "type": "textarea",
+              "key": "field-112",
+              "is_active": true,
+              "is_required": false
+            }
+          ]
+        },
+        {
+          "name": "Passengers",
+          "sort": "1",
+          "type": "nested",
+          "fields": [
+            {
+              "title": "Country",
+              "options": "Saudi Arabia,Nigeria,USA,Germany",
+              "is_multi": false,
+              "is_active": true,
+              "is_required": true,
+              "sort": 1,
+              "type": "dropdown",
+              "key": "field-111"
+            },
+            {
+              "title": "",
+              "sort": 2,
+              "type": "image",
+              "key": "field-112",
+              "is_active": true,
+              "is_required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "location",
+      "sort": 1,
+      "sections": [
+        {
+          "name": "",
+          "sort": "1",
+          "type": "",
+          "fields": [
+            {
+              "title": "City",
+              "options": "riyadh,jeddah",
+              "is_multi": false,
+              "is_active": true,
+              "is_required": true,
+              "sort": 1,
+              "type": "dropdown",
+              "key": "field-111"
+            },
+            {
+              "title": "Type of address",
+              "options": "Residential,Commercial",
+              "is_multi": false,
+              "is_active": true,
+              "is_required": true,
+              "sort": 1,
+              "type": "dropdown",
+              "key": "field-111"
+            },
+            {
+              "title": "Street",
+              "sort": 2,
+              "type": "text",
+              "key": "field-112",
+              "is_active": true,
+              "is_required": true
+            },
+            {
+              "title": "Apartment no.",
+              "sort": 2,
+              "type": "text",
+              "key": "field-112",
+              "is_active": true,
+              "is_required": true
+            },
+            {
+              "title": "Building no.",
+              "sort": 2,
+              "type": "text",
+              "key": "field-112",
+              "is_active": true,
+              "is_required": true
+            },
+            {
+              "title": "Floor no.",
+              "sort": 2,
+              "type": "text",
+              "key": "field-112",
+              "is_active": true,
+              "is_required": true
+            },
+            {
+              "title": "Postal Code",
+              "sort": 2,
+              "type": "text",
+              "key": "field-112",
+              "is_active": true,
+              "is_required": false
+            }
+          ]
+        },
+        {
+          "name": "",
+          "sort": "1",
+          "type": "",
+          "fields": [
+            {
+              "title": "Country",
+              "options": "Saudi Arabia",
+              "is_multi": false,
+              "is_active": true,
+              "is_required": true,
+              "sort": 1,
+              "type": "dropdown",
+              "key": "field-111"
+            },
+            {
+              "title": "",
+              "sort": 2,
+              "type": "map",
+              "key": "field-112",
+              "is_active": true,
+              "is_required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

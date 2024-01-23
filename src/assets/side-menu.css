@@ -1,0 +1,65 @@
+.bg-color {
+    background-color: #F2F4FC;
+}
+
+.brand_logo {
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+    object-fit: contain;
+}
+
+@media (min-width: 992px) {
+    .aside {
+        transition: width 0.3s ease;
+    }
+}
+
+.aside {
+    display: flex;
+    background-color: #F2F4FC;
+}
+
+.aside-secondary-enabled:not([data-kt-aside-minimize=on]) .aside .aside-primary {
+    border-right-color: var(--kt-border-color);
+}
+
+.aside-secondary-enabled .aside .aside-primary {
+    border-right: 1px solid transparent;
+}
+
+@media (min-width: 992px) {
+    .aside .aside-primary {
+        width: 64px;
+    }
+}
+
+.aside .aside-primary {
+    flex-shrink: 0;
+}
+
+.aside .aside-secondary {
+    overflow: hidden;
+    width: 100%;
+}
+
+.aside {
+    width: 300px;
+}
+
+@media (min-width: 992px) {
+    .aside-minimize .aside {
+        width: 64px;
+    }
+    .aside-fixed.aside-minimize-hover .aside {
+        width: 64px;
+    }
+}
+
+.nav .nav-item .nav-link {
+    cursor: pointer;
+}
+
+.aside-menu .menu-nav>.menu-item.menu-item-here>.menu-heading, .aside-menu .menu-nav>.menu-item.menu-item-here>.menu-link {
+    background-color: transparent;
+}

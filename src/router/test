@@ -1,0 +1,57 @@
+const
+
+/// 
+
+routes: [
+    // {
+    //   path: "/",
+    //   component: () => import('../views/admin-login.vue'),
+    //   beforeEnter: checkUserSession,
+    //   redirect: "en/admin-login",
+    //   children: [
+    //     {
+    //       path: "/en/admin-login",
+    //       component: () => import('../views/admin-login.vue')
+    //     },
+    //   ],
+    // },
+    {
+      path: '/form/:tenant/:code',
+      name: 'embedded-form',
+      component: () => import('../views/EmbeddedForm.vue')
+    },
+    // {
+    //   path: '/:catchAll(.*)',
+    //   name: '404',
+    //   component: () => import('../views/404.vue')
+    // },
+    {
+      path: "/:locale?",
+      component: RouterView,
+      beforeEnter: Tr.routeMiddleware,
+      children: [
+          {
+            path: 'admin-login',
+            name: 'adminLogin',
+            component: () => import('../views/admin-login.vue'),
+            meta: { auth: false }
+          },
+          {
+            path: 'customer-login',
+            name: 'customerLogin',
+            component: () => import('../views/customer-login.vue'),
+            meta: { auth: false }
+          },
+          {
+            path: 'forgot-password',
+            name: 'forgotPassword',
+            component: () => import('../views/forgot-password.vue')
+          },
+          {
+            path: 'data',
+            name: 'data',
+            component: () => import('../views/data.vue')
+          }
+        ]
+    }
+  ]
